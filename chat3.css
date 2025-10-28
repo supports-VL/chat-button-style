@@ -1,0 +1,49 @@
+.minimizedChatIcon {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+
+    display: flex;
+    align-items: center;          /* центрирует по вертикали */
+    justify-content: center;      /* центрирует по горизонтали */
+    flex-direction: column;       /* ставит строки одна под другой */
+
+    width: 240px;
+    height: 72px;                 /* фиксированная высота */
+    padding: 10px 16px;
+    box-sizing: border-box;
+
+    background: linear-gradient(145deg, #3B82F6, #2563EB);
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;           /* выравнивает обе строки по центру */
+    cursor: pointer;
+    transition: all 0.25s ease;
+    z-index: 9999;
+}
+
+/* SVG-иконка сверху */
+.minimizedChatIcon::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;           /* немного отступа от текста */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2a/Credit-card-font-awesome.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.minimizedChatIcon:hover {
+    background: linear-gradient(145deg, #2563EB, #1E40AF);
+    transform: scale(1.03);
+}
+
+.minimizedChatIcon:active {
