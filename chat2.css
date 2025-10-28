@@ -1,0 +1,58 @@
+/* ======== Blue Chat Button (VCC-Compatible) ======== */
+
+.minimizedChatIcon {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+
+    /* 🔵 Синий градиент + иконка чата */
+    background-image: url('https://static-00.iconduck.com/assets.00/live-chat-icon-2048x1882-k954apfz.png'),
+                      linear-gradient(145deg, #3B82F6, #2563EB);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 16px center, center;
+    background-size: 24px 24px, cover;
+
+    border: none;
+    border-radius: 16px;
+    padding: 12px 16px 12px 50px; /* место под иконку */
+    max-width: 240px;
+    min-width: 180px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover (при наведении) */
+.minimizedChatIcon:hover {
+    background-image: url('https://static-00.iconduck.com/assets.00/live-chat-icon-2048x1882-k954apfz.png'),
+                      linear-gradient(145deg, #2563EB, #1E40AF);
+    transform: scale(1.03);
+}
+
+/* Active (при нажатии) */
+.minimizedChatIcon:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Используем поддерживаемый класс для текста */
+.chatBody {
+    text-align: left;
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    white-space: normal;
+    word-break: break-word;
+}
