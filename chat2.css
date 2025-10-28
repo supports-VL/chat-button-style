@@ -1,4 +1,4 @@
-/* ======== Declined Payment Button (Perfect Alignment) ======== */
+/* ======== Declined Payment Button (SVG Icon Version) ======== */
 
 .minimizedChatIcon {
     position: fixed;
@@ -6,14 +6,14 @@
     right: 20px;
 
     display: flex;
-    align-items: center;       /* 💡 Центрирует иконку и текст вертикально */
+    align-items: center;         /* 💡 Центрирует иконку и текст */
     justify-content: flex-start;
-    gap: 8px;
+    gap: 10px;
 
     background: linear-gradient(145deg, #3B82F6, #2563EB);
     border: none;
     border-radius: 14px;
-    padding: 10px 16px;
+    padding: 12px 18px;
     max-width: 260px;
     min-width: 180px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
@@ -30,18 +30,21 @@
     z-index: 9999;
 }
 
-/* 💳 Эмоджи — теперь выравнено по центру */
+/* 💳 SVG-иконка */
 .minimizedChatIcon::before {
-    content: "💳";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 17px;
-    line-height: 1;
-    margin-right: 6px;
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2a/Credit-card-font-awesome.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-/* Hover — немного темнее */
+/* Hover — плавное увеличение и затемнение */
 .minimizedChatIcon:hover {
     background: linear-gradient(145deg, #2563EB, #1E40AF);
     transform: scale(1.03);
@@ -53,9 +56,9 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* Текстовая часть */
+/* Текст */
 .chatBody {
-    display: block;                  /* 💡 Блок — чтобы перенос работал корректно */
+    display: block;
     white-space: normal;
     word-break: break-word;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
