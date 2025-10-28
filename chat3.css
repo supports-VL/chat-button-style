@@ -1,49 +1,46 @@
+/* ======== Compact Two-Line Chat Button ======== */
+
 .minimizedChatIcon {
     position: fixed;
     bottom: 30px;
     right: 20px;
 
     display: flex;
-    align-items: center;          /* центрирует по вертикали */
-    justify-content: center;      /* центрирует по горизонтали */
-    flex-direction: column;       /* ставит строки одна под другой */
+    align-items: center;
+    justify-content: flex-start;
 
-    width: 240px;
-    height: 72px;                 /* фиксированная высота */
-    padding: 10px 16px;
-    box-sizing: border-box;
-
+    /* 🔵 Синий фон */
     background: linear-gradient(145deg, #3B82F6, #2563EB);
     border: none;
-    border-radius: 16px;
+    border-radius: 14px;
+    padding: 10px 14px;
+    width: 200px; /* кнопка уже */
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 
     color: #fff;
     font-family: 'Segoe UI', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    line-height: 1.25;
-    text-align: center;           /* выравнивает обе строки по центру */
+    line-height: 1.3;
+    text-align: left;
+
     cursor: pointer;
     transition: all 0.25s ease;
     z-index: 9999;
 }
 
-/* SVG-иконка сверху */
+/* 💳 Иконка в тексте */
 .minimizedChatIcon::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    margin-bottom: 4px;           /* немного отступа от текста */
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2a/Credit-card-font-awesome.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    content: "💳";
+    font-size: 16px;
+    margin-right: 6px;
+    flex-shrink: 0;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
 }
 
+/* Hover */
 .minimizedChatIcon:hover {
     background: linear-gradient(145deg, #2563EB, #1E40AF);
-    transform: scale(1.03);
-}
-
-.minimizedChatIcon:active {
+    tran
