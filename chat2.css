@@ -1,4 +1,4 @@
-/* ======== Declined Payment Button (Blue Chat Style) ======== */
+/* ======== Declined Payment Button (Perfect Alignment) ======== */
 
 .minimizedChatIcon {
     position: fixed;
@@ -6,16 +6,14 @@
     right: 20px;
 
     display: flex;
-    align-items: center;
+    align-items: center;       /* 💡 Центрирует иконку и текст вертикально */
     justify-content: flex-start;
     gap: 8px;
 
-    /* 🔵 Синий фон */
     background: linear-gradient(145deg, #3B82F6, #2563EB);
     border: none;
     border-radius: 14px;
-    padding: 12px 16px;
-    width: auto;
+    padding: 10px 16px;
     max-width: 260px;
     min-width: 180px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
@@ -32,17 +30,18 @@
     z-index: 9999;
 }
 
-/* 💳 Эмоджи в начале кнопки */
+/* 💳 Эмоджи — теперь выравнено по центру */
 .minimizedChatIcon::before {
     content: "💳";
-    font-size: 17px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 17px;
+    line-height: 1;
     margin-right: 6px;
 }
 
-/* Hover — чуть темнее и плавное увеличение */
+/* Hover — немного темнее */
 .minimizedChatIcon:hover {
     background: linear-gradient(145deg, #2563EB, #1E40AF);
     transform: scale(1.03);
@@ -54,11 +53,11 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* Текст внутри кнопки */
+/* Текстовая часть */
 .chatBody {
-    display: inline-block;
+    display: block;                  /* 💡 Блок — чтобы перенос работал корректно */
     white-space: normal;
     word-break: break-word;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+    margin: 0;
 }
-
