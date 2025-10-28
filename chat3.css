@@ -2,8 +2,8 @@
 
 .minimizedChatIcon {
     position: fixed;
-    bottom: 30px;
-    right: 20px;
+    bottom: 25px;
+    right: 15px;
 
     display: flex;
     align-items: center;
