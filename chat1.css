@@ -1,0 +1,39 @@
+/* ======== Chat Button Style (VCC-Compatible) ======== */
+
+.minimizedChatIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    /* 🔴 Красный градиент + белая иконка */
+    background-image: url('https://img.icons8.com/ios-filled/100/FFFFFF/chat.png'),
+                      linear-gradient(145deg, #FF4844, #D93632);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: 40px 40px, cover;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Hover (эффект наведения) */
+.minimizedChatIcon:hover {
+    background-image: url('https://img.icons8.com/ios-filled/100/FFFFFF/chat.png'),
+                      linear-gradient(145deg, #E13E3A, #C1302C);
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Active (при нажатии) */
+.minimizedChatIcon:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
